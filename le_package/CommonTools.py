@@ -7,14 +7,44 @@ def premiere_fonction(x, y, z):
     """
     ça va faire des trucs trop bien avec x, y et z
 
-    @input:
-    - x : c'est x
-    - y : c'est y
-    - z : c'est z
+    Parameters
+    ----------
+    x : float
+        c'est x
+    y : float
+        c'est y
+    z : float 
+        c'est z
 
-    @output:
-    - une opération super complexe sur x, y et z
+    Returns
+    -------
+    float
+        renvoie x+y+z
     """
 
     res = x+y+z
     return res
+
+
+
+def deuxieme_fonction(a, b):
+
+    """
+
+    Cette fonction est géniale.
+
+    Parameters
+    ----------
+    a : float
+        c'est un bon petit float
+    b : int
+        c'est un gentil int
+
+    Returns
+    -------
+    bool
+        dit si a == b
+
+    """
+
+    return a == b

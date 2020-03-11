@@ -1,6 +1,6 @@
 __author__ = 'Francois CHANEL'
 __version__ = 1.0
-__all__ = ['def my_special_function(x, y, z)']
+__all__ = ['my_special_function']
 
 
 from . import CommonTools
@@ -9,13 +9,19 @@ def my_special_function(x, y, z):
     """
     ça va faire des opérations ultra spéciales avec  x, y et z
 
-    @input:
-    - x : c'est x
-    - y : c'est y
-    - z : c'est z
+    Parameters
+    ----------
+    x : float
+        c'est x
+    y : float
+        c'est y
+    z : float 
+        c'est z
 
-    @output:
-    - un truc incroyablement sophistiqué sur x, y et z
+    Returns
+    -------
+    float
+        renvoie un machin incroyablement complexe à partir de x, y et z
     """
 
     res = CommonTools.premiere_fonction(x, y, z)
