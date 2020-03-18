@@ -1,7 +1,7 @@
-le_package
-==========
+LePackage
+=========
 
 .. toctree::
    :maxdepth: 4
 
-   le_package
+   LePackage
