@@ -69,4 +69,8 @@ def setup(app):
     app.add_stylesheet('theme_overrides.css')
 
 
+# pour parader le problème Sphinx error: master file c:\git\tuto_sphinx\docs\contents.rst not found
+master_doc = 'index'
+
+
 pygments_style = 'sphinx'

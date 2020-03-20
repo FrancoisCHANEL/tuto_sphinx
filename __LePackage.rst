@@ -10,12 +10,9 @@ LePackage.CommonTools module
 ----------------------------
 
 .. automodule:: LePackage.CommonTools
-   :members: 
+   :members:
    :undoc-members:
    :show-inheritance:
-   :exclude-members: remove_proxy
-
-   .. autodecorator:: remove_proxy
 
 LePackage.SpecialFunctions module
 ---------------------------------
@@ -330,38 +327,3 @@ True   False  True
 ===================================
 
 .. automodule:: math
-
-
-
-[essai] py
-===================================
-
-.. py:module:: SuperModule
-
-.. py:class:: MaSuperClasse(param, metre)
-   
-   .. py:attribute:: mon_petit_attribut
-   .. py:method:: quux()
-
-
-.. automodule:: LePackage.SpecialFunctions
-
-   .. autoclass:: Objet_de_ouf
-      :members: show_me_your_attributes, modif_dynamique, _pour_voir_effet_underscore_simple
-
-   
-   .. autofunction:: _my_private_parts
-
-
-
-[essai] py v2
-===================================
-
-.. automodule:: LePackage.SpecialFunctions
-   :platform: Unix
-   :synopsis: Ca ne sert strictement a rien
-   :deprecated: 3.1
-   :members:
-   :private-members:
-   :special-members:
-   :imported-members:

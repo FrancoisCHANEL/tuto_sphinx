@@ -74,3 +74,31 @@ master_doc = 'index'
 
 
 pygments_style = 'sphinx'
+
+#* force l'affichage de la docstring d'une classe + de celle de sa méthode __init__ ou __new__
+autoclass_content = 'both'
+
+#* précise quelles options sont appelées par les méthodes auto(module, class, function, etc.)
+autodoc_default_options = {
+    'members': True,
+    'undoc-members' : True,
+    'undoc-members': True,
+    # 'exclude-members': '__weakref__, __repr__, __str__, __init__, __dict__, __module__',
+    'exclude-members': [
+        '__weakref__', 
+        '__repr__', 
+        '__str__', 
+        '__init__', 
+        '__dict__', 
+        '__module__',
+        'remove_proxy'
+    ],
+    'private-members' : True,
+    'special-members' : True,
+}
+
+les_exclus = autodoc_default_options['exclude-members']
+les_exclus = ', '.join(les_exclus)
+autodoc_default_options.update({
+    'exclude-members':les_exclus
+})
