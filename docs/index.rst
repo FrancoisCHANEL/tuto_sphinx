@@ -7,6 +7,7 @@ Welcome to documm's documentation!
 ==================================
 
 .. toctree::
+   :numbered:
    :maxdepth: 2
    :caption: Contents:
 

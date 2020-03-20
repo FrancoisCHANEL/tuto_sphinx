@@ -365,3 +365,105 @@ True   False  True
    :private-members:
    :special-members:
    :imported-members:
+
+
+
+test de code snippets
+=====================
+
+.. testsetup:: *
+
+   import parrot
+
+The parrot module is a module about parrots.
+
+Doctest example:
+
+.. doctest::
+
+   >>> parrot.voom(3000)
+   This parrot wouldn't voom if you put 3000 volts through it!
+
+Test-Output example:
+
+.. testcode::
+
+   parrot.voom(3000)
+
+This would output:
+
+.. testoutput::
+
+   This parrot wouldn't voom if you put 3000 volts through it!
+
+
+
+
+glossary
+=====================
+
+.. glossary::
+
+   environment
+      A structure where information about all documents under the root is
+      saved, and used for cross-referencing.  The environment is pickled
+      after the parsing stage, so that successive runs only need to read
+      and parse new and changed documents.
+
+   source directory
+      The directory which, including its subdirectories, contains all
+      source files for one Sphinx project.
+
+
+.. glossary::
+
+   term 1 : A
+   term 2 : B
+      Definition of both terms.
+
+
+
+exemple code caché
+=====================
+.. hidden-code-block:: python
+   :linenos:
+   :label: --- SHOW/HIDE ---
+
+   x = 10
+   y = x + 5
+
+
+
+.. exemple highlight
+.. =====================
+.. .. highlight:: python
+
+..    >>> import numpy as np
+..    >>> import pandas as pd
+
+..    >>> my_index = pd.date_range(
+..    ...   start=2010, 
+..    ...   periods=10, 
+..    ...   freq='24h', 
+..    ...   tz='Europe/Paris'
+..    ... )
+
+..    >>> my_data  = np.random.randint(0, 10, len(my_index))
+
+..    >>> ts = pd.Series(
+..    ...   index=my_index,
+..    ...   data=my_data
+..    ... )
+
+..    >>> ts
+..    1970-01-01 00:00:00.000002010    1
+..    1970-01-02 00:00:00.000002010    9
+..    1970-01-03 00:00:00.000002010    4
+..    1970-01-04 00:00:00.000002010    9
+..    1970-01-05 00:00:00.000002010    1
+..    1970-01-06 00:00:00.000002010    1
+..    1970-01-07 00:00:00.000002010    6
+..    1970-01-08 00:00:00.000002010    1
+..    1970-01-09 00:00:00.000002010    2
+..    1970-01-10 00:00:00.000002010    4
+..    Freq: 24H, dtype: int32

@@ -36,11 +36,20 @@ release = '1'
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.napoleon',
+    'sphinx.ext.doctest',
+    'hidden_code_block'
 ]
 
 napoleon_google_docstring = False
 napoleon_use_param = False
 napoleon_use_ivar = True
+
+doctest_global_setup = '''
+try:
+    import pandas as pd
+except ImportError:
+    pd = None
+'''
 
 
 # Add any paths that contain templates here, relative to this directory.
@@ -73,6 +82,8 @@ def setup(app):
 master_doc = 'index'
 
 
+#* choix d'un thème pour les code snippets
+# pygments_style = 'default'
 pygments_style = 'sphinx'
 
 #* force l'affichage de la docstring d'une classe + de celle de sa méthode __init__ ou __new__
@@ -83,7 +94,6 @@ autodoc_default_options = {
     'members': True,
     'undoc-members' : True,
     'undoc-members': True,
-    # 'exclude-members': '__weakref__, __repr__, __str__, __init__, __dict__, __module__',
     'exclude-members': [
         '__weakref__', 
         '__repr__', 
@@ -102,3 +112,7 @@ les_exclus = ', '.join(les_exclus)
 autodoc_default_options.update({
     'exclude-members':les_exclus
 })
+
+#* gère la prise en compte des type hints dans auto-doc
+autodoc_typehints = 'signature'
+

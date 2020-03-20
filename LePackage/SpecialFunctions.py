@@ -5,6 +5,7 @@ __all__ = [
     'google_style_docstring',
     'test_fonction_avec_decorateur',
     '_my_private_parts',
+    'type_hints_essai',
     'Objet_de_ouf',
     'Foo',
     ]
@@ -96,6 +97,36 @@ def _my_private_parts(x, y):
     """
 
     return x + y
+
+
+def type_hints_essai(
+    x: float = 2.5, 
+    y: float = 5,
+    multiply: bool = True
+) -> float:
+    """
+    test sur le type hinting
+
+    Parameters
+    ----------
+    x : float
+        c'est x
+    y : float
+        oh le joli petit y !
+    multiply : bool
+        oh la petite boule !
+
+
+    Returns
+    -------
+    float
+        selon multiply ou pas, on répond un truc différent
+    """
+
+    if multiply:
+        return x * y
+    else:
+        return x + y
 
 
 class Objet_de_ouf():
